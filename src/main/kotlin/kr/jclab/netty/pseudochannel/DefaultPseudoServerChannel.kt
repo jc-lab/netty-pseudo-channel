@@ -13,6 +13,6 @@ open class DefaultPseudoServerChannel : AbstractPseudoServerChannel() {
 
     override fun localAddress0(): SocketAddress = localAddress
 
-    fun registerChildChannel(child: AbstractPseudoChannel): ChannelFuture =
-        this.eventLoop().register(child)
+    fun registerChildChannel(child: AbstractPseudoChannel) =
+        this.pipeline().fireChannelRead(child)
 }

@@ -33,7 +33,7 @@ abstract class AbstractPseudoServerChannelTest {
     fun newChildChannel(): TestPseudoChannel {
         // spy not working...
         val child = TestPseudoChannel(channel, DefaultChannelId.newInstance())
-        channel.registerChildChannel(child).get()
-        return child
+        channel.registerChildChannel(child)
+        return spy(child)
     }
 }
