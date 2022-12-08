@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "kr.jclab.netty"
-version = "0.0.1-rc1"
+version = "0.0.1-rc3"
 
 repositories {
     mavenCentral()
